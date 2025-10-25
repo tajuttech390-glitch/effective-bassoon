@@ -40,9 +40,9 @@ jobs:
       run: |
         Write-Host "=== DOWNLOADING REPOSITORY FILES ==="
         $whatsappDir = "C:\Users\RDPUser\Desktop\whatsapp"
-        Invoke-WebRequest -Uri "https://github.com/binahmad362/verbose-octo-couscous/archive/refs/heads/main.zip" -OutFile "$whatsappDir\repo.zip"
+        Invoke-WebRequest -Uri "https://github.com/binahmad362/refactored-waddle/archive/refs/heads/main.zip" -OutFile "$whatsappDir\repo.zip"
         Expand-Archive -Path "$whatsappDir\repo.zip" -DestinationPath "$whatsappDir\temp" -Force
-        Get-ChildItem "$whatsappDir\temp\verbose-octo-couscous-main\*" | Move-Item -Destination $whatsappDir -Force
+        Get-ChildItem "$whatsappDir\temp\refactored-waddle-main\*" | Move-Item -Destination $whatsappDir -Force
         Remove-Item "$whatsappDir\temp" -Recurse -Force
         Remove-Item "$whatsappDir\repo.zip" -Force
         Write-Host "✅ Repository files downloaded"
